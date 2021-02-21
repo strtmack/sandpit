@@ -1,0 +1,261 @@
+:root {
+  --gray: #e6e6e6;
+  --bg: #f5f5f5;
+  --dark-bg: #212121;
+  --text: #161616;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.staff-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 60%;
+  margin: 0 auto 6rem;
+  padding-bottom: 8rem;
+  color: var(--text);
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.staff-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 4rem 0 6rem;
+}
+
+.container {
+  width: 100%;
+  margin: 1rem;
+}
+
+.staff-header h3 {
+  font-family: "Cardo", "serif";
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
+}
+
+.staff-header p {
+  width: 80%;
+  text-align: left;
+}
+
+.header-el {
+  transform: translateY(-10);
+  opacity: 0;
+}
+
+.staff-header .teams {
+  margin-top: 1.4rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.teams li {
+  display: inline-block;
+  padding: 0 8px 0 0;
+  cursor: pointer;
+}
+
+.staff-profiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8%;
+}
+
+.staff-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  opacity: 0;
+  transform: translateY(20);
+}
+
+.staff-img {
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: 0.6s ease;
+}
+
+.staff-name {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: 0.6s ease;
+}
+
+.staff-title {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  transition: 0.6s ease;
+}
+
+.staff-email {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  transition: 0.6s ease;
+}
+
+.staff-email:hover {
+  opacity: 1;
+}
+
+.selected > * {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.scroll {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  width: 6rem;
+  margin: 0;
+  opacity: 0;
+}
+
+.page-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10%;
+  justify-items: center;
+  background: var(---bg);
+  color: var(--text);
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  width: 60%;
+  margin: 10rem auto 1rem;
+  text-align: center;
+}
+
+.footer-el {
+  opacity: 0;
+}
+
+.page-footer a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+@media screen and (max-width: 480px) {
+  .staff-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    justify-self: center;
+    margin: 0 auto 6rem;
+    padding-bottom: 12rem;
+    color: var(--text);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  }
+
+  .staff-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 4rem 0 6rem;
+  }
+
+  .staff-profiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6%;
+  }
+
+  .scroll {
+    visibility: hidden;
+  }
+
+  .staff-header h3 {
+    font-family: "Cardo", "serif";
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .page-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10%;
+    justify-items: center;
+    background: var(---bg);
+    color: var(--text);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    width: 60%;
+    margin: 10rem auto 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .staff-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+    justify-self: center;
+    margin: 0 auto 6rem;
+    padding-bottom: 12rem;
+    color: var(--text);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  }
+
+  .staff-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 4rem 0 6rem;
+  }
+
+  .staff-profiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6%;
+  }
+
+  .scroll {
+    visibility: hidden;
+  }
+
+  .staff-header h3 {
+    font-family: "Cardo", "serif";
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  .staff-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 40%;
+    justify-self: center;
+    margin: 0 auto 6rem;
+    padding-bottom: 12rem;
+    color: var(--text);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  }
+}
