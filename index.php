@@ -40,12 +40,24 @@
     <a class="footer-el" href="http://www.strtmack.com">strtmack.com</a>
     <p class="footer-el">Thanks for visiting!</p>
   </footer>
-
+ 
   <img class="scroll" src="images/scroll.png" alt="scroll-wheel">
+  <canvas id="canvas3d"></canvas>
+
   <canvas class="canvas"></canvas>
 
   <script src="./canvas.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   <script src="./app.js"></script>
+  <script>
+                    // Global namespace (backwards-compatibility)
+                    var SPE = {};
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+                <script src="https://cdn.spline.design/lib/anime.min.js"></script>
+                <script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
+                <script src="three/assets.js"></script>
+                <script src="three/scene.js"></script>
+                <script src="three/main.js"></script>
 </body>
 </html>

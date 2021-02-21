@@ -192,6 +192,14 @@ anime({
   delay: 1200,
 });
 
+anime({
+  targets: "#canvas3d",
+  opacity: 1,
+  duration: 1800,
+  easing: "easeInOutSine",
+  delay: 1600,
+});
+
 // Handle window resize canvas
 addEventListener("resize", () => {
   anime({
@@ -206,7 +214,7 @@ addEventListener("resize", () => {
 window.addEventListener("scroll", () => {
   let scrolled = window.pageYOffset;
   const background = document.querySelector(".canvas");
-  background.style.top = -(scrolled * 0.6) + "px";
+  background.style.top = -(scrolled * 0.4) + "px";
 });
 
 getStaff();
